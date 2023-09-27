@@ -1,4 +1,4 @@
-/* Estilo general de la página */
+/*ESTO ES UNA PRUEBA*/
 body {
   font-family: Verdana, Arial, sans-serif;
   margin: 0;
@@ -182,16 +182,20 @@ footer h2 {
   flex: 0 0 calc(33.33% - 20px); /* Ancho del 33.33% para las 3 columnas y resta el espacio entre ellas */
   margin-right: 20px; /* Espacio entre las columnas */
 }
-/* Estilo para el texto dentro de las cartas de Pokémon */
-.pokemon-card h3 {
+
+aless@Ale MINGW64 ~/DEV011-data-lovers (main)
+$ git checkout RAMA_DE_PRUEBA
+Switched to branch 'RAMA_DE_PRUEBA'
+
+aless@Ale MINGW64 ~/DEV011-data-lovers (RAMA_DE_PRUEBA)
+$.pokemon-card h3 {
   font-size: 14px; /* Tamaño de letra más pequeño */
 }
 
 .pokemon-card p {
   font-size: 12px; /* Tamaño de letra más pequeño */
 }
-/* Estilo para ocultar elementos al principio */
-/* Estilo para ocultar elementos al principio */
+
 #welcomeHeader,
 .buttons,
 .pokemon-image {
