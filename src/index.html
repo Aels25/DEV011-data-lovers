@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="main.js" type="module"></script>
-  </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Página de Pokémon</title>
+</head>
+<body>
+    <header class="header" id="welcomeHeader">
+        <h1><span class="highlight">¡BIENVENIDO AL POKÉDEX!</span></h1>
+    </header>
+    <main id="welcomeMain">
+        <h2 id="discoverHeading"><span class="highlight">Descubre el mundo de los Pokémon</span></h2>
+        <div class="container">
+            <div class="buttons left">
+                <button class="button" for="boton1"><label>¡Encuentra a los Más Poderosos!</label></button>
+                <button class="button" for="boton2"><label>Descubre lo Raro entre los Raros</label></button>
+                <button class="button" for="boton3"><label>¡Atrapa a los Más Escurridizos!</label></button>
+            </div>
+            <div class="image-container">
+                <img src="" class="pokemon-image">
+                <button class="centered-button" id="openPokemonButton">Encuentra tu Pokémon</button>
+            </div>
+            <div class="buttons right">
+                <button class="button" for="boton4"><label>Planifica tu Evolución</label></button>
+                <button class="button" for="boton5"><label>Elige a los Campeones del Combate</label></button>
+                <button class="button" for="boton6"><label>¿Ataque o Defensa? ¡Tú Decides!</label></button>
+            </div>
+        </div>
+        <!-- Contenedor para las cartas de Pokémon -->
+        <div class="pokemon-cards-container">
+            <!-- Las cartas de Pokémon se generarán aquí -->
+        </div>
+    </main>
+    <footer>
+        <h2 id="footer">Desarrollado por Alessandra</h2>
+    </footer>
+    <script type="module" src="main.js"></script>
+</body>
 </html>
