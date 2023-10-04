@@ -1,5 +1,4 @@
-/*ESTO ES UNA PRUEBA*/
-
+/* ESTO ES UNA PRUEBA */
 body {
   font-family: Verdana, Arial, sans-serif;
   margin: 0;
@@ -39,7 +38,7 @@ h2 {
   font-weight: normal;
 }
 
-main h2 {
+#welcomeMain h2 {
   font-size: 30px;
   color: #f4f6fd;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -170,7 +169,6 @@ footer h2 {
   width: calc(25% - 20px); /* Ajusta el ancho de las cartas para 4 columnas y resta el espacio entre ellas */
 }
 
-
 /* Estilo para las imágenes de Pokémon dentro de las cartas */
 .pokemon-card img {
   max-width: 50%; /* Establece el ancho máximo de la imagen al 50% del ancho de la carta */
@@ -184,17 +182,10 @@ footer h2 {
   margin-right: 20px; /* Espacio entre las columnas */
 }
 
-
 .pokemon-card h3 {
   font-size: 14px; /* Tamaño de letra más pequeño */
 }
 
 .pokemon-card p {
   font-size: 12px; /* Tamaño de letra más pequeño */
-}
-
-#welcomeHeader,
-.buttons,
-.pokemon-image {
-  display: block;
 }

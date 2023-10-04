@@ -7,30 +7,73 @@
     <title>Página de Pokémon</title>
 </head>
 <body>
-    <header class="header" id="welcomeHeader">
-        <h1><span class="highlight">¡BIENVENIDO AL POKÉDEX!</span></h1>
+    <header id="welcomeHeader">
+        <h1>¡BIENVENIDO AL POKÉDEX!</h1>
     </header>
+
     <main id="welcomeMain">
-        <h2 id="discoverHeading"><span class="highlight">Descubre el mundo de los Pokémon</span></h2>
+        <h2 id="discoverHeading">Descubre el mundo de los Pokémon</h2>
         <div class="container">
             <div class="buttons left">
-                <button class="button" for="boton1"><label>¡Encuentra a los Más Poderosos!</label></button>
-                <button class="button" for="boton2"><label>Descubre lo Raro entre los Raros</label></button>
-                <button class="button" for="boton3"><label>¡Atrapa a los Más Escurridizos!</label></button>
+                <button class="button" id="button1">¡Encuentra a los Más Poderosos!</button>
+                <button class="button" id="button2">Descubre lo Raro entre los Raros</button>
+                <button class="button" id="button3">¡Atrapa a los Más Escurridizos!</button>
             </div>
             <div class="image-container">
                 <img src="" class="pokemon-image">
+                <div id="opciones">
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" name="tipo">
+                        <option value="todos">Todos</option>
+                        <option value="grass">Hierba</option>
+                        <option value="poison">Veneno</option>
+                        <option value="fire">Fuego</option>
+                        <option value="flying">Volador</option>
+                        <option value="water">Agua</option>
+                        <option value="bug">Bicho</option>
+                        <option value="normal">Normal</option>
+                        <option value="electric">Eléctrico</option>
+                        <option value="ground">Tierra</option>
+                        <option value="fighting">Lucha</option>
+                        <option value="psychic">Psíquico</option>
+                        <option value="rock">Roca</option>
+                        <option value="ice">Hielo</option>
+                        <option value="dragon">Dragón</option>
+                        <option value="fairy">Hada</option>
+                        <option value="dark">Siniestro</option>
+                        <option value="ghost">Fantasma</option>
+                        <option value="steel">Acero</option>
+                    </select>
+                    
+        
+                    <label for="generacion">Generación:</label>
+                    <select id="generacion" name="generacion">              
+                        <option value="todos">Todos</option>
+                        <option value="kanto">Kanto</option>
+                        <option value="johto">Johto</option>
+                    </select>
+        
+                    <label for="rareza">Rareza:</label>
+                    <select id="rareza" name="rareza">
+                        <option value="todos">Todos</option>
+                        <option value="mythic">Mítico</option>
+                        <option value="normal">Normal</option>
+                        <option value="legendary">Legendario</option>
+                    </select>
+                </div>
                 <button class="centered-button" id="openPokemonButton">Encuentra tu Pokémon</button>
             </div>
             <div class="buttons right">
-                <button class="button" for="boton4"><label>Planifica tu Evolución</label></button>
-                <button class="button" for="boton5"><label>Elige a los Campeones del Combate</label></button>
-                <button class="button" for="boton6"><label>¿Ataque o Defensa? ¡Tú Decides!</label></button>
+                <button class="button" id="button4">Planifica tu Evolución</button>
+                <button class="button" id="button5">Elige a los Campeones del Combate</button>
+                <button class="button" id="button6">¿Ataque o Defensa? ¡Tú Decides!</button>
             </div>
         </div>
-        <!-- Contenedor para las cartas de Pokémon -->
+
+        
+
         <div class="pokemon-cards-container">
-            <!-- Las cartas de Pokémon se generarán aquí -->
+            <!-- Aquí es donde se renderizarán las cartas de Pokémon filtradas -->
         </div>
     </main>
     <footer>

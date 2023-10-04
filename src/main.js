@@ -1,12 +1,13 @@
-// Importa los datos de Pokémon desde el archivo correspondiente (data/pokemon/pokemon.js).
 import data from './data/pokemon/pokemon.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const openPokemonButton = document.getElementById('openPokemonButton');
     const cardsContainer = document.querySelector('.pokemon-cards-container');
+    const optionsContainer = document.getElementById('opciones');
 
     openPokemonButton.addEventListener('click', () => {
-        // Oculta los elementos que deseas ocultar
+        optionsContainer.style.display = 'none';
+
         document.querySelector('.buttons.left').style.display = 'none';
         document.querySelector('.buttons.right').style.display = 'none';
         document.getElementById('welcomeHeader').style.display = 'none';
@@ -14,39 +15,49 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('openPokemonButton').style.display = 'none';
         document.getElementById('discoverHeading').style.display = 'none';
         document.getElementById('footer').style.display = 'none';
-
-
-        
-
-    
-        // Muestra el contenedor de cartas
         cardsContainer.style.display = 'flex';
-    
-        // Muestra las cartas de Pokémon en 4 columnas
-        renderPokemonCards(data.pokemon, cardsContainer, 4);
+
+        const selectedType = document.getElementById('tipo').value;
+        const selectedGeneration = document.getElementById('generacion').value;
+        const selectedRarity = document.getElementById('rareza').value;
+
+        console.log('Selected Type:', selectedType);
+        console.log('Selected Generation:', selectedGeneration);
+        console.log('Selected Rarity:', selectedRarity);
+
+        const filteredPokemon = filterPokemon(data.pokemon, selectedType, selectedGeneration, selectedRarity);
+        console.log('Filtered Pokemon:', filteredPokemon);
+
+        renderPokemonCards(filteredPokemon, cardsContainer);
     });
-    
-    
-    
-    
-    
 });
 
-// Agrega una función para renderizar las cartas de Pokémon en una sola columna
+function filterPokemon(pokemonList, type, generation, rarity) {
+    return pokemonList.filter(pokemon => {
+        const typeMatch = type === 'todos' || pokemon.type.some(t => type.includes(t.toLowerCase()));
+        const generationMatch = generation === 'todos' || pokemon.generation.name.toLowerCase() === generation.toLowerCase();
+        const rarityMatch = rarity === 'todos' || pokemon['pokemon-rarity'].toLowerCase() === rarity.toLowerCase();
+
+        console.log("Pokemon:", pokemon.name, "Tipo:", pokemon.type, "Generación:", pokemon.generation.name, "Rareza:", pokemon['pokemon-rarity']);
+        console.log("Type Match:", typeMatch, "Generation Match:", generationMatch, "Rarity Match:", rarityMatch);
+
+        return typeMatch && generationMatch && rarityMatch;
+    });
+}
+
+
 function renderPokemonCards(pokemonList, container) {
-    container.innerHTML = ''; // Limpia el contenido anterior
+    container.innerHTML = '';
 
     pokemonList.forEach((pokemon) => {
         renderPokemonCard(pokemon, container);
     });
 }
 
-// Agrega una función para renderizar una carta de Pokémon
 function renderPokemonCard(pokemon, container) {
     const card = document.createElement('div');
     card.classList.add('pokemon-card');
 
-    // Agrega aquí el contenido de la carta de Pokémon, incluido el botón de "Ver Descripción"
     card.innerHTML = `
         <h3>Número de la Pokédex: ${pokemon.num}</h3>
         <img src="${pokemon.img}" alt="${pokemon.name}">
@@ -61,25 +72,19 @@ function renderPokemonCard(pokemon, container) {
             <p>Probabilidad de Aparición: ${pokemon['spawn-chance']}</p>
             <p>Resistencias: ${pokemon.resistant.join(', ')}</p>
             <p>Debilidades: ${pokemon.weaknesses.join(', ')}</p>
-            <p>Movimientos Rápidos: ${pokemon['quick-move'].map(move => move.name).join(', ')}</p>
-            <p>Ataques Especiales: ${pokemon['special-attack'].map(attack => attack.name).join(', ')}</p>
-            <p>Huevo: ${pokemon.egg}</p>
-            <p>Distancia de Compañero: ${pokemon['buddy-distance-km']} km</p>
-            <p>Evolución: ${pokemon.evolution ? `Candy: ${pokemon.evolution.candy}` : 'No evoluciona'}</p>
         </div>
     `;
 
     container.appendChild(card);
 
-    // Agrega un evento de clic al botón de "Ver Descripción" para mostrar/ocultar la descripción
     const descriptionButton = card.querySelector('.description-button');
     const description = card.querySelector('.description');
 
     descriptionButton.addEventListener('click', () => {
         if (description.style.display === 'none' || description.style.display === '') {
-            description.style.display = 'block'; // Muestra la descripción
+            description.style.display = 'block';
         } else {
-            description.style.display = 'none'; // Oculta la descripción
+            description.style.display = 'none';
         }
     });
 }

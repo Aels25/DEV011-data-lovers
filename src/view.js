@@ -1,5 +1,4 @@
 // view.js
-
 export const renderItems = (pokemonList, rootElement) => {
   console.log("Renderización iniciada");
 
@@ -13,9 +12,10 @@ export const renderItems = (pokemonList, rootElement) => {
       card.innerHTML = `
           <h3>Número de la Pokédex: ${pokemon.num}</h3>
           <h3>Nombre: ${pokemon.name}</h3>
-          <p>Generación: ${pokemon.generation.name}</p>
           <p>Descripción: ${pokemon.about}</p>
-          <!-- Agrega el resto de los datos del Pokémon aquí -->
+          <p>Generación: ${pokemon.generation.name}</p>
+          <p>Tipo: ${pokemon.type}</p>
+          <p>Rareza: ${pokemon['pokemon-rarity']}</p>
       `;
 
       container.appendChild(card);
