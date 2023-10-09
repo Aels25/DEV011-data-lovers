@@ -43,15 +43,14 @@
                         <option value="ghost">Fantasma</option>
                         <option value="steel">Acero</option>
                     </select>
-        
-        
+
                     <label for="generacion">Generación:</label>
-                    <select id="generacion" name="generacion">              
+                    <select id="generacion" name="generacion">
                         <option value="todos">Todos</option>
                         <option value="kanto">Kanto</option>
                         <option value="johto">Johto</option>
                     </select>
-        
+
                     <label for="rareza">Rareza:</label>
                     <select id="rareza" name="rareza">
                         <option value="todos">Todos</option>
@@ -59,7 +58,7 @@
                         <option value="normal">Normal</option>
                         <option value="legendary">Legendario</option>
                     </select>
-                    </div>
+                </div>
                 <button class="centered-button" id="openPokemonButton">Encuentra tu Pokémon</button>
             </div>
 
@@ -68,14 +67,31 @@
                 <button class="button">Elige a los Campeones del Combate</button>
                 <button class="button">¿Ataque o Defensa? ¡Tú Decides!</button>
             </div>
-            
-        </div>
-        
-        
+
+            <div id="ordenado" style="display: none;">
+                <label for="ordenarPor">Ordenar por:</label>
+<select id="ordenarPor" name="ordenarPor">
+    <option value="CP Máximo">¡Encuentra a los Más Poderosos!</option>
+    <option value="Índice de Rareza">Descubre lo Raro entre los Raros</option>
+    <option value="Probabilidad de Captura">Atrapa a los Más Escurridizos!</option>
+    <option value="Distancia de Evolución">Planifica tu Evolución</option>
+    <option value="Eficiencia de Combate">Elige a los Campeones del Combate</option>
+    <option value="Relación Ataque/Defensa">¿Ataque o Defensa? ¡Tú Decides!</option>
+</select>
+
+<label for="orden">Ordenar:</label>
+<select id="orden" name="orden">
+    <option value="asc">Ascendente</option>
+    <option value="desc">Descendente</option>
+</select>
+
+<button id="aplicarOrdenButton">Aplicar Orden</button>
+
         <!-- Contenedor para las cartas de Pokémon -->
         <div class="pokemon-cards-container">
             <!-- Las cartas de Pokémon se generarán aquí -->
         </div>
+        <button id="clearButton" data-testid="button-clear">Reiniciar</button>
     </main>
     <footer>
         <h2 id="footer">Desarrollado por Alessandra</h2>
