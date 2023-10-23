@@ -1,8 +1,8 @@
 /* ESTO ES UNA PRUEBA */
 body {
   font-family: Verdana, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: 1vw;
+  padding: 1vw;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_CkWf80oZ6i379MydBRf_OXOY_kQpoCvdcg&usqp=CAU");
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@ body {
 }
 
 /* Estilo para ocultar elementos al principio */
-#welcomeHeader,
+header,
 .buttons,
 .pokemon-image,
 footer,
@@ -22,170 +22,273 @@ footer,
 /* Estilo para el título principal */
 h1 {
   color: #e84e77;
-  font-size: 42px;
+  font-size: 3vw; /* Cambiado a unidad relativa */
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 40px;
+  margin-top: 2vw; /* Cambiado a unidad relativa */
   letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgb(243, 236, 236);
+  text-shadow: 0.2vw 0.2vw 0.2vw rgb(243, 236, 236); /* Cambiado a unidad relativa */
 }
 
 /* Estilo para el subtítulo */
 h2 {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 1.5vw; /* Cambiado a unidad relativa */
   font-weight: normal;
 }
 
 #welcomeMain h2 {
-  font-size: 30px;
+  font-size: 2vw; /* Cambiado a unidad relativa */
   color: #f4f6fd;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0.2vw 0.2vw 0.2vw rgba(0, 0, 0, 0.5); /* Cambiado a unidad relativa */
 }
 
 footer h2 {
-  font-size: 18px;
+  font-size: 1.2vw; /* Cambiado a unidad relativa */
   color: #1f1f22;
   text-align: left;
-  padding-left: 300px;
+  padding-left: 1vw; /* Cambiado a unidad relativa */
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 80vw; /* Cambiado a unidad relativa */
   margin: 0 auto;
-  padding: 20px;
+  padding: 2vw; /* Cambiado a unidad relativa */
   text-align: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
-/* Estilo para la imagen de Pokémon */
 .pokemon-image {
-  width: 300px;
-  height: 300px;
+  width: 20vw; /* Cambiado a unidad relativa */
+  height: 20vw; /* Cambiado a unidad relativa */
   border-radius: 50%;
-  box-shadow: 2px 6px 10px rgb(252, 246, 246);
-  margin: 20px auto 20px;
+  box-shadow: 0.2vw 0.6vw 1vw rgb(252, 246, 246); /* Cambiado a unidad relativa */
+  margin: 2vw auto 2vw; /* Cambiado a unidad relativa */
 }
 
 .pokemon-image:hover {
   transform: scale(1.2);
 }
 
-/* Estilo para los botones a la izquierda de la imagen */
-.buttons.left {
+/* Estilo para los botones */
+.buttons {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  margin: 2vw 0; /* Cambiado a unidad relativa */
 }
 
-/* Estilo para los botones a la derecha de la imagen */
-.buttons.right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-/* Estilo base de los botones */
-.button {
-  background-color: #ffcc29;
-  color: #080808;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  margin: 40px;
-  cursor: pointer;
-  text-shadow: 0.08px 0.08px 0.08px rgb(4, 4, 4);
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Escala el botón y cambia el color de fondo cuando se pasa el mouse sobre él */
-.button:hover {
-  transform: scale(1.3);
-  background-color: #ffc000;
-}
-
-.centered-button {
-  background-color: #e84e77;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 15px 30px;
-  font-size: 18px;
-  margin-top: 40px;
-  cursor: pointer;
-  text-shadow: 0.3px 0.3px 0.3px rgb(251, 249, 249);
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.centered-button:hover {
-  background-color: #d74263;
-  transform: scale(1.3);
-}
-
-/* Estilo para el botón "Ver Descripción" en las cartas de Pokémon */
-.description-button {
+.button,
+.centered-button,
+.description-button,
+#aplicarOrdenButton,
+#clearButton {
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  margin: 10px 0;
+  padding: 1vw 2vw; /* Cambiado a unidad relativa */
+  font-size: 1.6vw; /* Cambiado a unidad relativa */
   cursor: pointer;
-  text-shadow: 0.08px 0.08px 0.08px rgb(4, 4, 4);
+  text-shadow: 0.08vw 0.08vw 0.08vw rgb(4, 4, 4); /* Cambiado a unidad relativa */
   transition: background-color 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2); /* Cambiado a unidad relativa */
+  display: block;
+  margin: 2vw auto; /* Alineación centrada */
 }
 
 /* Escala el botón y cambia el color de fondo cuando se pasa el mouse sobre él */
-.description-button:hover {
+.button:hover,
+.centered-button:hover,
+.description-button:hover,
+#aplicarOrdenButton:hover,
+#clearButton:hover {
   background-color: #0056b3;
   transform: scale(1.1);
 }
 
+/* Estilo para opciones de filtrado, ordenado y aplicar orden */
+#opciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2vw; /* Cambiado a unidad relativa */
+}
+
+#ordenado {
+  width: 80%;
+  max-width: 30vw; /* Cambiado a unidad relativa */
+  margin-bottom: 2vw; /* Cambiado a unidad relativa */
+}
+
+#aplicarOrdenButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 1vw 2vw; /* Cambiado a unidad relativa */
+  font-size: 1.6vw; /* Cambiado a unidad relativa */
+  cursor: pointer;
+  text-shadow: 0.08vw 0.08vw 0.08vw rgb(4, 4, 4); /* Cambiado a unidad relativa */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2); /* Cambiado a unidad relativa */
+}
+
+#aplicarOrdenButton:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para las cartas de Pokémon y columnas */
 .pokemon-cards-container {
-  max-width: 1400px;
-  display: none;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Centra las cartas */
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en columnas */
+  justify-content: space-between; /* Alinea las tarjetas en la dirección principal (columnas) */
+  gap: 3vw; /* Cambiado a unidad relativa */
   margin: 0 auto;
 }
 
-/* Establece el estilo para las cartas de Pokémon dentro de las columnas */
 .pokemon-card {
   background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: left;
-  margin-bottom: 20px;
-  width: calc(25% - 20px); /* Ajusta el ancho de las cartas para 4 columnas y resta el espacio entre ellas */
-}
-
-/* Estilo para las imágenes de Pokémon dentro de las cartas */
-.pokemon-card img {
-  max-width: 50%; /* Establece el ancho máximo de la imagen al 50% del ancho de la carta */
-  height: auto;
-  display: block; /* Centra la imagen horizontalmente */
-  margin: 0 auto; /* Centra la imagen horizontalmente */
-}
-
-.pokemon-card-column {
-  flex: 0 0 calc(33.33% - 20px); /* Ancho del 33.33% para las 3 columnas y resta el espacio entre ellas */
-  margin-right: 20px; /* Espacio entre las columnas */
+  border-radius: 1vw; /* Cambiado a unidad relativa */
+  padding: 2vw;
+  box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2); /* Cambiado a unidad relativa */
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 2vw; /* Cambiado a unidad relativa */
+  display: flex;
+  flex-direction: column;
+  width: auto; /* Ajusta automáticamente el ancho al contenido */
 }
 
 .pokemon-card h3 {
-  font-size: 14px; /* Tamaño de letra más pequeño */
+  font-size: 1.8vw; /* Tamaño de letra relativo */
+  color: #79abe2; /* Color azul */
+  margin-top: 1vw; /* Espacio superior */
+  text-transform: capitalize; /* Convierte el texto a mayúsculas solo para la primera letra de cada palabra */
 }
 
-.pokemon-card p {
-  font-size: 12px; /* Tamaño de letra más pequeño */
+
+.pokemon-card img {
+  flex: 1; /* La imagen ocupa todo el espacio disponible */
+  width: 100%;
+  height: auto;
+  border-radius: 0.5vw; /* Cambiado a unidad relativa */
+  margin-bottom: 1vw; /* Cambiado a unidad relativa */
+}
+
+/* Estilo para el contenido de la carta */
+.pokemon-card-content {
+  flex: 1; /* El contenido ocupa todo el espacio disponible */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo para el botón "Ver Detalle" dentro de la tarjeta */
+.description-button {
+  background-color: #ffcc29;
+  color: #080808;
+  border: none;
+  border-radius: 0.5vw; /* Cambiado a unidad relativa */
+  padding: 1vw 2vw; /* Cambiado a unidad relativa */
+  font-size: 1.4vw; /* Cambiado a unidad relativa */
+  cursor: pointer;
+  text-shadow: 0.3vw 0.3vw 0.3vw rgb(251, 249, 249); /* Cambiado a unidad relativa */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2); /* Cambiado a unidad relativa */
+  margin-top: auto; /* Mueve el botón hacia la parte inferior */
+}
+
+.description-button:hover {
+  background-color: #ffc000;
+  transform: scale(1.1);
+}
+
+/* Estilo para la descripción que inicialmente está oculta, al presionar el boton ver descrip*/
+.description {
+  display: none;
+  max-height: 20vw; /* Cambiado a unidad relativa */
+  overflow-y: auto;
+  transition: max-height 0.3s ease;
+  font-size: 1.2vw; /* Cambiado a unidad relativa */
+}
+
+#clearButton {
+  width: 80%;
+  max-width: 30vw; /* Cambiado a unidad relativa */
+}
+
+#openPokemonButton {
+  background-color: #ffcc29;
+  color: #080808;
+  border: none;
+  border-radius: 0.5vw; /* Cambiado a unidad relativa */
+  padding: 1.5vw 3vw; /* Cambiado a unidad relativa */
+  font-size: 1.8vw; /* Cambiado a unidad relativa */
+  cursor: pointer;
+  text-shadow: 0.3vw 0.3vw 0.3vw rgb(251, 249, 249); /* Cambiado a unidad relativa */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2); /* Cambiado a unidad relativa */
+}
+
+#openPokemonButton:hover {
+  background-color: #ffc000;
+  transform: scale(1.3);
+}
+
+dd {
+  font-size: 1.0vw; /* Tamaño de letra para términos y definiciones y unidad relativa */
+  text-align: left; /* Alinea a la izquierda */
+  color: #333; /* Color de texto */
+  margin-bottom: 10px; /* Añade espacio adicional debajo del elemento */
+
+}
+
+dt {
+  font-size: 1.2vw; /* Tamaño de letra para términos y unidad relativa */
+  color: #9ce0af; /* Cambia el color a verde u otro color deseado */
+  text-align: left; /* Alinea a la izquierda */
+  margin: 3px 0; /* Añade espacio alrededor del elemento */
+
+}
+
+#root {
+  max-width: 80vw; /* Cambiado a unidad relativa */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vw; /* Cambiado a unidad relativa */
+}
+
+#root .pokemon-card {
+  background-color: #fff;
+  border-radius: 1vw; /* Cambiado a unidad relativa */
+  padding: 2vw;
+  box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2); /* Cambiado a unidad relativa */
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 2vw; /* Cambiado a unidad relativa */
+}
+
+#root ul {
+  list-style-type: disc;
+  margin: 0;
+  padding: 2vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap:3vw;
+}
+
+#root li {
+  flex: 0 0 calc(33.33% - 2vw);
+  margin: 5vw; /* Esto aplica 2vw a todos los lados */
+
+
+}
+select {
+  color: #333;
+  font-size: 1.6vw; /* Cambiado a unidad relativa */
+  border: 0.1vw solid #70a8d6; /* Cambiado a unidad relativa */
 }
